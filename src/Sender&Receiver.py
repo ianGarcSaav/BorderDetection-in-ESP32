@@ -7,7 +7,7 @@ import os
 import glob
 
 # Parámetros por defecto
-DEFAULT_SEND_IMAGE_PATH = "../results/part_1_1.jpeg"  # Solo para referencia
+DEFAULT_SEND_IMAGE_PATH = "../processedImages/part_1_1.jpeg"  # Solo para referencia
 SERIAL_PORT = "COM3"                                   # Puerto serial al que está conectado el ESP32
 BAUD_RATE = 115200                                     # Velocidad de baudios
 WAIT_BOOT_LOGS = 2                                     # Tiempo para esperar boot logs del ESP32
@@ -65,15 +65,15 @@ def process_image(image_path, output_path):
 
 if __name__ == "__main__":
     # Carpeta de entrada donde se encuentran las imágenes a procesar
-    input_folder = os.path.join("..", "results")
+    input_folder = os.path.join("..", "imageDivisions")
     # Carpeta de salida donde se guardarán las imágenes procesadas
-    output_folder = os.path.join("..", "final")
+    output_folder = os.path.join("..", "processedImages")
     os.makedirs(output_folder, exist_ok=True)
 
-    # Buscar todas las imágenes en la carpeta ../results con extensión .jpeg
+    # Buscar todas las imágenes en la carpeta ../imageDivisions con extensión .jpeg
     image_paths = glob.glob(os.path.join(input_folder, "*.jpeg"))
     if not image_paths:
-        print("No se encontraron imágenes en la carpeta ../results")
+        print("No se encontraron imágenes en la carpeta ../imageDivisions")
         exit(1)
 
     # Procesar cada imagen secuencialmente

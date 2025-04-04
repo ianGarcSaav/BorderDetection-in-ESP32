@@ -2,9 +2,9 @@ import os
 from PIL import Image, ImageEnhance, ImageFilter
 
 # Carpeta de entrada con las 256 imágenes (fragmentos)
-input_folder = "../final"
+input_folder = "../processedImages"
 # Ruta de salida para la imagen final postprocesada
-output_path = "imagen_completa_postprocessed.jpeg"
+output_path = "../final_image.jpeg"
 
 # Recopilar archivos que sigan el patrón "part_<fila>_<columna>_processed.jpeg"
 files = [f for f in os.listdir(input_folder) if f.endswith("_processed.jpeg")]

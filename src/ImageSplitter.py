@@ -3,7 +3,7 @@ import os
 
 # Parámetros
 IMAGE_PATH = "../images/imagen_original.png"  # Ruta de la imagen original
-OUTPUT_FOLDER = "../results"  # Carpeta donde se guardarán las particiones
+OUTPUT_FOLDER = "../imageDivisions"  # Carpeta donde se guardarán las particiones
 NUM_PARTS = 16  # Número de divisiones en cada eje (32x32 = 1024 imágenes)
 RESIZE_FACTOR = 2  # Factor de reducción (1 = no reducir, 2 = reducir a la mitad)
 OUTPUT_FORMAT = "JPEG"  # Formato de salida ("JPEG", "PNG", etc.)
